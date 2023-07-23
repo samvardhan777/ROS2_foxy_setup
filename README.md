@@ -24,3 +24,11 @@ colcon build
 . /usr/share/gazebo/setup.sh
 . ~/Desktop/ws/install/setup.bash
 ```
+
+## Launch project:
+
+```
+ros2 launch dolly_gazebo dolly.launch.py 
+Control the robot in another terminal using teleop_keyboard 
+ros2 run teleop_twist_keyboard teleop_twist_keyboard  --ros-args -r /cmd_vel:=/dolly/cmd_vel
+```
